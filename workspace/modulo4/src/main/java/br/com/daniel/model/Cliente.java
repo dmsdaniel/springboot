@@ -1,11 +1,13 @@
 package br.com.daniel.model;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+
 @Entity
 public class Cliente {
-	@Id 
+	@Id
 	@GeneratedValue
 	private Long id;
 	
@@ -38,5 +40,13 @@ public class Cliente {
 		this.email = email;
 	}
 	
+    public Cliente() {
+		
+	}
+    
+	public Cliente(String nome, String email) {
+		this.nome=nome;
+		this.email=email;
+	}
 
 }
